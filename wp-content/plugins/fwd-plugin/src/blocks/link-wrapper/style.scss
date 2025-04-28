@@ -1,0 +1,19 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-fwd-link-wrapper {
+    display: block;
+    text-decoration: none;
+    
+    &:hover {
+        text-decoration: none;
+    }
+
+    &[href] {
+        cursor: pointer;
+    }
+}

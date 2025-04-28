@@ -1,0 +1,64 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.internal-page-banner {
+
+	.internal-page-banner__wrapper {
+		.block-editor-inner-blocks {
+			width: 100%;
+		}
+
+		.block-editor-block-list__layout {
+			display: flex;
+			flex-direction: row;
+		}
+
+		.internal-page-banner__buttons {
+			margin-block-start: 0;
+
+			.wp-block-button {
+				inline-size: auto;
+
+				.wp-block-button__link {
+					padding: 1rem 3rem;
+				}
+			}
+		}
+
+		.internal-page-banner__breadcrumbs {
+			margin-block-end: 0;
+
+			.internal-page-banner__breadcrumbs {
+				padding: 0;
+			}
+		}
+
+		.internal-page-banner__content {
+			&.block-editor-block-list__layout {
+				flex-direction: column;
+			}
+		}
+
+		.internal-page-banner__image {
+			img,
+			.components-resizable-box__container {
+				block-size: 100% !important;
+				inline-size: 100% !important;
+			}
+		}
+
+		.internal-page-banner__subheading {
+			margin-block-start: 0;
+		}
+	}
+
+	&.is-style-bg-image {
+		.internal-page-banner__buttons {
+			display: none !important;
+		}
+	}
+}
+

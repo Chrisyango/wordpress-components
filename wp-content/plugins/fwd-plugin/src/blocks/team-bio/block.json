@@ -1,0 +1,22 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fwd/team-bio",
+	"title": "Team Bio",
+	"description": "Biography of a team member",
+	"category": "fwd",
+	"icon": "block-default",
+	"keywords": [
+		"text",
+		"image",
+		"bio"
+	],
+	"supports": {
+		"anchor": true,
+		"html": false
+	},
+	"textdomain": "fwd-plugin",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

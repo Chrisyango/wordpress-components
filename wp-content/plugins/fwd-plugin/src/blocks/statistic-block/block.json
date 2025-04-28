@@ -1,0 +1,26 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fwd/statistic-block",
+	"title": "Statistic Block",
+	"description": "A row of statistics with the option of either an image or text.",
+	"category": "fwd",
+	"icon": "grid-view",
+	"keywords": [
+		"text",
+		"image",
+		"statistic"
+	],
+	"supports": {
+		"anchor": true,
+		"color": {
+			"background": true,
+			"text": false
+		},
+		"html": false
+	},
+	"textdomain": "fwd-plugin",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

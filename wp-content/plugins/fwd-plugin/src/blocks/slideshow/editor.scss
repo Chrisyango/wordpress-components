@@ -1,0 +1,49 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ .wp-block-fwd-slideshow {
+	&.has-child-selected {
+		.slider__wrapper > [class*="wp-block-"] {
+			display: none;
+
+			&.is-selected,
+			&.has-child-selected {
+				&.wp-block-image {
+					display: block;
+				}
+
+				&.wp-block-media-text {
+					display: grid;
+				}
+
+				&.wp-block-cover {
+					display: flex;
+				}
+			}
+		}
+	}
+
+	.components-button-group {
+		display: flex;
+		margin: 0 0 64px;
+
+		.components-button {
+			height: auto;
+			padding: 6px 12px;
+			transition: 0.3s background, 0.3s color;
+			
+			&.active,
+			&:hover {
+				background: var(--wp--preset--color--accent);
+				color: var(--wp--preset--color--white);
+			}
+		}
+	}
+
+	.slider__wrapper {
+		overflow: hidden;
+	}
+}

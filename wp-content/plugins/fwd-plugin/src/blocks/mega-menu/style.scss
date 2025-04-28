@@ -1,0 +1,71 @@
+@layer block {
+    nav.header__nav {
+        position: unset;
+
+        ul.wp-block-navigation__container {
+            position: unset;
+
+            li.wp-block-fwd-mega-menu {
+                position: unset;
+        
+                // Reset button styles.
+                a {
+                    cursor: pointer;
+                }
+        
+                .mega-menu__wrapper {
+                    right: 0;
+                    opacity: 0;
+                    overflow: hidden;
+                    position: absolute;
+                    top: 100%;
+                    transition: opacity .1s linear;
+                    visibility: hidden;
+                    width: 100%;
+                    z-index: 2;
+        
+                    .mega-menu__close-button {
+                        align-items: center;
+                        -webkit-backdrop-filter: blur(16px) saturate(180%);
+                        backdrop-filter: blur(16px) saturate(180%);
+                        background-color: #ffffffba;
+                        border: none;
+                        border-radius: 999px;
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: center;
+                        opacity: 0;
+                        padding: 4px;
+                        position: absolute;
+                        right: 12px;
+                        text-align: center;
+                        top: 12px;
+                        transition: opacity .2s ease;
+                        z-index: 100;
+                
+                        // Show the close button when focused (for keyboard navigation)
+                        &:focus {
+                            opacity: 1;
+                        }
+                    }
+        
+                    // Show the close button when the mega menu is hovered.
+                    &:hover {
+                        .mega-menu__close-button {
+                            opacity: 1;
+                        }
+                    }
+                }
+        
+                // Show the mega menu when aria-expanded is true.
+                a[aria-expanded=true] {
+                    &~.mega-menu__wrapper {
+                        opacity: 1;
+                        overflow: visible;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+}

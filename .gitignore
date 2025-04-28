@@ -40,9 +40,9 @@ node_modules/
 
 # Theme build files
 /wp-content/themes/fwd-theme/build
-/wp-content/themes/noble-village-theme/build
+/wp-content/themes/fwd-child-theme/build
 
 # All plugins except ours
 /wp-content/plugins/*
-!/wp-content/plugins/noble-village-plugin
-/wp-content/plugins/noble-village-plugin/build
+!/wp-content/plugins/fwd-plugin
+/wp-content/plugins/fwd-plugin/build

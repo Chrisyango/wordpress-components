@@ -1,0 +1,84 @@
+/**
+ * Block styles for the statistic block
+ */
+.statistic-block {
+	margin-block-start: 0 !important;
+	max-inline-size: 100% !important;
+}
+
+.statistic-block__image,
+.statistic-block__tile {
+	aspect-ratio: 1 / 1;
+	display: flex;
+	flex-basis: 30%;
+	flex-grow: 0;
+	inline-size: 100%;
+	margin: 0;
+	max-inline-size: 21.875rem;
+}
+
+.statistic-block__image {
+	img {
+		block-size: 100%;
+		inline-size: 100%;
+		object-fit: cover;
+	}
+}
+
+.statistic-block__text {
+	transition: color 300ms ease-in-out;
+}
+
+.statistic-block__tile {
+	align-items: center;
+	background-color: var(--wp--preset--color--accent-2);
+	justify-content: center;
+	padding: 2rem;
+	transition: background-color 300ms ease-in-out;
+
+	@media( min-width: 640px ) {
+		padding: 2.5rem;
+	}
+
+	&:hover {
+		background-color: var(--wp--preset--color--accent);
+
+		.statistic-block__text {
+			color: var(--wp--preset--color--base);
+		}
+	}
+}
+
+.statistic-block__wrapper {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	justify-content: flex-start;
+	margin: auto;
+	max-inline-size: var(--wp--style--global--wide-size);
+	padding: 3.75rem 1.5rem;
+
+	@media( min-width: 768px ) {
+		flex-direction: row;
+		gap: 2.5rem;
+		justify-content: center;
+		padding: 5rem 0;
+	}
+}
+
+/**
+ * If the block has no background and has another statistic block without a
+ * background before it, remove the top padding
+ */
+.statistic-block:not(.has-background) {
+	+ .statistic-block:not(.has-background) {
+		.statistic-block__wrapper {
+			padding: 0 1.5rem 3.75rem;
+
+			@media( min-width: 768px ) {
+				padding: 0 0 5rem;
+			}
+		}
+	}
+}

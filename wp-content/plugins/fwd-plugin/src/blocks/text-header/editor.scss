@@ -1,0 +1,8 @@
+@layer block {
+	.text-header {
+		&.alignleft {
+			padding-inline-end: 15%;
+			inline-size: 100%;
+		}
+	}
+}

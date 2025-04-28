@@ -1,0 +1,37 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fwd/internal-page-banner",
+	"title": "Internal page banner",
+	"description": "Internal page banner with breadcrumbs, title, inset image, and the option for a button",
+	"category": "fwd",
+	"icon": "cover-image",
+	"keywords": [
+		"banner",
+		"internal",
+		"header"
+	],
+	"example": {},
+	"supports": {
+		"align": [
+			"full"
+		],
+		"anchor": true,
+		"color": {
+			"background": true,
+			"text": false
+		},
+		"html": false
+	},
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		}
+	},
+	"textdomain": "fwd-plugin",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

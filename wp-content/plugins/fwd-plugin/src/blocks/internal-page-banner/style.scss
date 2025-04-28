@@ -1,0 +1,204 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.internal-page-banner {
+	margin-block-start: 0 !important;
+	padding-block-end: 2.5rem;
+}
+
+.internal-page-banner__breadcrumbs {
+	font-size: .875rem;
+	margin-block-end: 1.875rem;
+	order: 1;
+}
+
+.internal-page-banner__button {
+	inline-size: 100%;
+}
+
+.internal-page-banner__buttons {
+	&.wp-block-buttons {
+		margin: 0;
+		order: 4;
+		padding: 0;
+
+		.wp-block-button {
+			margin: 2.5rem 0 0;
+		}
+	}
+}
+
+.internal-page-banner__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	margin: 1.25rem 1rem;
+	max-inline-size: unset;
+
+	@media( min-width: 768px ) {
+		justify-content: center;
+		margin: 0 7.25%;
+		max-inline-size: calc( 100% - 38.5rem );
+	}
+}
+
+.internal-page-banner__heading {
+	&.wp-block-heading {
+		margin-block-start: .9375rem;
+		order: 3;
+
+		@media( min-width: 768px ) {
+			margin-block-start: 1.25rem;
+		}
+	}
+}
+
+.internal-page-banner__image {
+	aspect-ratio: 1 / 1;
+	margin-block-end: 0;
+	max-inline-size: unset;
+	inline-size: 100%;
+
+	@media( min-width: 768px ) {
+		max-inline-size: 38.5rem; // 43%
+	}
+
+	img {
+		block-size: 100%;
+		inline-size: 100%;
+		object-fit: cover;
+	}
+}
+
+.internal-page-banner__subheading {
+	&.wp-block-heading {
+		color: var(--wp--preset--color--contrast-3);
+		font-family: var(--wp--preset--font-family--ff-market);
+		order: 2;
+		margin: 0;
+	}
+}
+
+.internal-page-banner__wrapper {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	max-inline-size: 90rem;
+	position: relative;
+	inline-size: 100%;
+
+	@media( min-width: 768px ) {
+		flex-direction: row;
+	}
+}
+
+/* Styles for the 'minimal' variation */
+.internal-page-banner.is-style-minimal {
+
+	.internal-page-banner__button {
+		display: none;
+	}
+
+	.internal-page-banner__content {
+		@media( min-width: 768px ) {
+			max-inline-size: 100%;
+		}
+	}
+
+	.internal-page-banner__heading {
+		margin-block-start: 0;
+	}
+
+	.internal-page-banner__image {
+		display: none;
+	}
+
+	.internal-page-banner__subheading {
+		display: none;
+	}
+
+	.internal-page-banner__wrapper {
+		max-inline-size: 72rem;
+	}
+
+}
+
+/* Styles for the 'bg-image' variation */
+.internal-page-banner.is-style-bg-image {
+
+	.internal-page-banner__breadcrumbs {
+		order: 3;
+		padding: 1.25rem 0 2.5rem 1.5rem;
+
+		@media( min-width: 768px ) {
+			padding: 1.875rem 0 0;
+		}
+	}
+
+	.internal-page-banner__buttons {
+		display: none;
+	}
+
+	.internal-page-banner__content {
+		margin: 0;
+		max-inline-size: 100%;
+		min-inline-size: 0;
+		position: relative;
+		width: auto;
+
+		@media( min-width: 768px ) {
+			inset-inline-start: 10vw;
+			min-inline-size: 25rem;
+			margin: 17.5rem 0 0;
+			position: absolute;
+		}
+
+		@media( min-width: 1440px ) {
+			inset-inline-end: calc( 50% + min( 13.5vw, 12.125rem ) );
+			inset-inline-start: unset;
+		}
+	}
+
+	.internal-page-banner__heading {
+		background-color: var(--wp--preset--color--accent-2);
+		margin: 0;
+		order: 2;
+		padding: .9375rem 0 1.25rem 1.5rem;
+
+		@media( min-width: 768px ) {
+			padding: .5rem min( 25%, 6rem ) 1.25rem;
+		}
+	}
+
+	.internal-page-banner__image {
+		aspect-ratio: unset;
+		block-size: 12.5rem;
+		max-inline-size: 100%;
+		inline-size: 100%;
+
+		@media( min-width: 768px ) {
+			block-size: 25rem;
+			margin-block-end: 7.5rem;
+		}
+	}
+
+	.internal-page-banner__subheading {
+		background-color: var(--wp--preset--color--accent-2);
+		color: var(--wp--preset--color--contrast);
+		margin: 0;
+		order: 1;
+		padding: 1.25rem 0 0 1.5rem;
+
+		@media( min-width: 768px ) {
+			padding: 1.875rem min( 25.25%, 6.25rem ) 0;
+		}
+	}
+
+	.internal-page-banner__wrapper {
+		max-inline-size: 100%;
+	}
+
+}

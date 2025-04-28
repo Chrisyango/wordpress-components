@@ -1,0 +1,28 @@
+/// Editor styles
+
+.components-base-control__field {
+	margin-bottom: 0 !important;
+}
+
+.components-panel__body {
+	width: 100%;
+}
+
+.testimonial {
+	.wp-block-post {
+		align-items: center;
+		position: relative;
+	}
+}
+
+.testimonial__image {
+	position: absolute !important;
+
+	@media( min-width: 992px ) {
+		inset-inline-start: 0;
+	}
+
+	img {
+		object-fit: cover;
+	}
+}

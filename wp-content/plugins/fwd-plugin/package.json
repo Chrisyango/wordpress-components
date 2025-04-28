@@ -1,0 +1,27 @@
+{
+	"name": "fwd-plugin",
+	"version": "0.1.0",
+	"description": "Blocks and other functionality for the FWD Theme.",
+	"author": "Design FWD",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build --experimental-modules",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start --experimental-modules"
+	},
+	"dependencies": {
+		"classnames": "^2.5.1",
+		"@wordpress/interactivity": "^6.16.0"
+	},
+	"devDependencies": {
+		"@wordpress/icons": "^10.16.0",
+		"@wordpress/scripts": "^30.9.0",
+		"postcss-flexbugs-fixes": "^5.0.2",
+		"postcss-preset-env": "^10.1.3"
+	}
+}

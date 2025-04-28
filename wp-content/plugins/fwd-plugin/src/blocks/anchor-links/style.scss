@@ -1,0 +1,46 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.anchor-links__buttons {
+    gap: 1rem;
+    margin: auto;
+
+    .anchor-links__button {
+        width: 100%;
+
+        @media( min-width: 768px ) {
+            max-width: 17.35rem;
+            width: calc( 25% - .75rem );
+        }
+
+        @media( min-width: 1231px ) {
+            max-width: 17.35rem;
+            width: calc( 25% - .6rem );
+        }
+
+        > .wp-block-button__link {
+            background: var(--wp--preset--color--accent);
+            border: 1px solid var(--wp--preset--color--accent);
+            color: var(--wp--preset--color--white);
+            font-weight: 600;
+            padding: 1rem 2.5rem;
+            transition: background-color 300ms ease-in-out,
+                color 300ms ease-in-out;
+            width: 100%;
+            word-break: normal;
+
+            &:hover {
+                background: var(--wp--preset--color--white);
+                color: var(--wp--preset--color--accent);
+            }
+
+            @media( min-width: 801px ) {
+                padding: .5rem 2rem;
+            }
+        }
+    }
+}

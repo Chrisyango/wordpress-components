@@ -1,0 +1,21 @@
+.general-text {
+	max-inline-size: 356px;
+
+	@media( min-width: 768px ) {
+		max-inline-size: 572px;
+	}
+
+	@media( min-width: 1401px ) {
+		max-inline-size: 800px;
+	}
+
+	&.is-style-centered {
+		.general-text__buttons {
+			justify-content: center !important;
+		}
+	}
+
+	&.alignright {
+		margin-inline-start: auto !important;
+	}
+}

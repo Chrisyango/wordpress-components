@@ -1,0 +1,99 @@
+@layer block {
+	.general-text {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		max-inline-size: var(--wp--style--global--wide-size, 100%) !important;
+
+		/* Styles for nested buttons */
+		.wp-block-buttons {
+
+			.wp-block-button {
+				margin: 0;
+			}
+
+			@media( min-width: 992px ) {
+				max-inline-size: 572px;
+			}
+
+			@media( min-width: 1726px ) {
+				max-inline-size: 800px;
+			}
+		}
+
+		/// Other alignment styles
+		&.is-style-centered {
+			.general-text__buttons {
+				margin: 24px auto 0;
+				justify-content: center;
+			}
+			.general-text__wrapper {
+				text-align: center;
+			}
+		}
+		&.is-style-left, &.is-style-right {
+			.general-text__wrapper {
+				text-align: left;
+			}
+		}
+		&.is-style-left {
+			.general-text__wrapper {
+				align-items: flex-start;
+			}
+		}
+		&.is-style-right {
+			.general-text__wrapper {
+				align-items: flex-end;
+			}
+		}
+	}
+
+	.general-text__buttons,
+	.wp-block-buttons {
+		margin-block-start: 24px;
+	}
+
+	.general-text__content {
+
+		@media( min-width: 992px ) {
+			max-inline-size: 572px;
+		}
+
+		@media( min-width: 1726px ) {
+			max-inline-size: 800px;
+		}
+	}
+
+	.general-text__heading {
+		inline-size: 100%;
+		margin-block: 0;
+		max-inline-size: 572px;
+
+		@media( min-width: 992px ) {
+			max-inline-size: 572px;
+		}
+
+		@media( min-width: 1726px ) {
+			max-inline-size: 800px;
+		}
+	}
+
+	.general-text__wrapper {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		inline-size: 100%;
+		margin: 0px auto;
+		max-inline-size: 768px;
+		padding: 60px 0;
+
+		@media( min-width: 992px ) {
+			max-inline-size: 1160px;
+			padding-block: 90px;
+		}
+
+		@media( min-width: 1726px ) {
+			max-inline-size: 1600px;
+		}
+	}
+}

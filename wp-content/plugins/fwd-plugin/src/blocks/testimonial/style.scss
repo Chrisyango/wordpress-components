@@ -1,0 +1,180 @@
+/// Testimonial block styles
+
+.wp-block-fwd-testimonial {
+	float: none !important;
+	position: relative;
+	inline-size: 100%;
+	max-inline-size: 100% !important;
+
+	.wp-block-post {
+		align-items: flex-start;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		inline-size: 100%;
+		max-inline-size: 100%;
+
+		@media( min-width: 992px ) {
+			flex-direction: row;
+			justify-content: center;
+			max-inline-size: 888px;
+		}
+
+		@media( min-width: 1726px ) {
+			max-inline-size: 1075px;
+		}
+	}
+}
+
+.testimonial__body {
+	font-size: 1.25rem;
+	font-weight: 700;
+	line-height: 28px;
+	margin: 0 20px;
+	position: relative;
+
+	@media( min-width: 992px ) {
+		margin: 0;
+	}
+
+	&::before { // Quotation mark
+		color: var(--wp--preset--color--accent);
+		content: "“";
+		font-family: var(--wp--preset--font-family--spaziel-serif-round);
+		font-size: 12rem;
+		display: block;
+		font-weight: 500;
+		inset-block-start: -70px;
+		line-height: 1;
+		position: absolute;
+
+		@media( min-width: 992px ) {
+			font-size: 7.5rem;
+			inset-block-start: 0;
+			inset-inline-start: -60px;
+		}
+
+		/* Mac-specific fixes for quotation mark too high */
+		@supports ( -moz-osx-font-smoothing: auto ){
+			@media( min-width: 992px ) {
+				inset-block-start: 10px;
+			}
+		}
+		@supports ( -webkit-transition: all 0.3s ease-in-out ){
+			@media( min-width: 992px ) {
+				inset-block-start: 10px;
+			}
+		}
+	}
+}
+
+.testimonial__content {
+	background-color: var(--color--block-cycle-2);
+	border-radius: 50px 50px 0 50px;
+	padding: 120px 20px 50px 20px;
+	transition: background-color var(--transition-delay) ease-in-out;
+	width: 100%;
+	z-index: 0;
+
+	@media( min-width: 992px ) {
+		max-width: 768px;
+		padding: 80px 50px 50px 140px;
+	}
+
+	@media( min-width: 1726px ) {
+		max-width: 955px;
+	}
+}
+
+.testimonial__image {
+	aspect-ratio: 1 / 1;
+	block-size: 120px;
+	inset-block-start: 90px;
+	inset-inline-start: calc( 100% - 180px );
+	position: absolute;
+	inline-size: 120px;
+	z-index: 1;
+
+	@media( min-width: 992px ) {
+		inset-block-start: calc( 50% - 60px );
+		inset-inline-start: 57px;
+	}
+
+	img {
+		border-radius: 50%;
+		block-size: 100%;
+		inline-size: 100%;
+	}
+}
+
+.testimonial__title {
+	color: var(--wp--preset--color--contrast-3);
+	font-family: var(--wp--preset--font-family--open-sans);
+	font-size: 1.125rem;
+	line-height: 28px;
+	margin: 30px 20px 0 20px !important;
+
+	@media( min-width: 992px ) {
+		font-size: 1.25rem;
+		margin: 30px 0 0 0 !important;
+	}
+
+	&::before { // Em dash
+		content: "—";
+		margin-inline-end: 8px;
+	}
+}
+
+.testimonial__wrapper {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	width: 100%;
+
+	@media( min-width: 992px ) {
+		margin-block: 20px;
+		max-inline-size: var(--wp--style--global--content-size) !important;
+	}
+
+	@media( min-width: 1726px ) {
+		margin-block: 40px;
+		max-inline-size: min( calc( 100% - 270px ), 1640px ) !important;
+	}
+}
+
+/// Variation and alignment styles
+.testimonial {
+	&.alignleft {
+		margin-inline-end: 0 !important;
+
+		.wp-block-post {
+			margin-inline-end: 0;
+
+			@media( min-width: 992px ) {
+				margin-inline-end: auto;
+				margin-inline-start: -60px;
+			}
+
+			@media( min-width: 1726px ) {
+				margin-inline-start: -30px;
+			}
+		}
+	}
+	&.alignright {
+		margin-inline-start: 0 !important;
+
+		.wp-block-post {
+			margin-inline-start: 0;
+
+			@media( min-width: 992px ) {
+				margin-inline-start: auto;
+			}
+		}
+	}
+
+	&.is-style-alternate {
+		.testimonial__content {
+			background-color: var(--color--block-cycle-3);
+		}
+	}
+}

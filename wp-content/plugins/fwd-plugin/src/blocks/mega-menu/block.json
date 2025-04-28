@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fwd/mega-menu",
+	"title": "Mega Menu",
+	"description": "Add a mega menu to your navigation.",
+	"category": "fwd",
+	"keywords": [
+		"text",
+		"paragraph",
+		"heading"
+	],
+	"parent": [ "core/navigation" ],
+	"example": {},
+	"attributes": {
+		"label": {
+			"type": "string"
+		},
+		"menuSlug": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"html": false,
+		"interactivity": true,
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalFontStyle": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		}
+	},
+	"textdomain": "fwd-plugin",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"render": "file:./render.php",
+	"style": "file:./style-index.css",
+	"viewScriptModule": "file:./view.js"
+}

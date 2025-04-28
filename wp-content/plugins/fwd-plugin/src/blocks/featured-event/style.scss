@@ -1,0 +1,60 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-fwd-featured-post.featured-event {
+    @media( min-width: 769px ) {
+        max-width: 960px!important;
+    }
+
+    .featured-post__wrapper {
+        margin: 25px 0 0;
+        
+        .wp-block-post {
+            box-shadow: unset;
+            clip-path: unset;
+            gap: 0;
+            padding: 0 1.5rem;
+
+            @media( min-width: 769px ) {
+                gap: 2.5rem;
+            }
+    
+            .featured-post__content {
+                align-items: center;
+                display: flex;
+                flex-flow: column;
+                gap: 1.875rem;
+                justify-content: space-between;
+                margin: 0.9375rem 0 2.5rem;
+                text-align: center;
+                width: 100%;
+
+                @media( min-width: 769px ) {
+                    flex-flow: row;
+                    gap: 2.5rem;
+                    margin: 2.5rem 0;
+                    text-align: unset;
+                }
+
+                .featured-post__button {
+                    margin: 0;
+                }
+
+                .featured-post__categories,
+                .featured-post__date,
+                .featured-post__excerpt {
+                    display: none;
+                }
+            }
+    
+            .featured-post__image {
+                position: relative;
+                top: -45px;
+            }
+        }
+    }
+}

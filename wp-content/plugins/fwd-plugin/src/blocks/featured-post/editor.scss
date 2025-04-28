@@ -1,0 +1,15 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.components-base-control__field {
+    margin-bottom: 0!important;
+}
+
+.featured-post__tags {
+	&:not(:has(a)) {
+		opacity: 0;
+	}
+}

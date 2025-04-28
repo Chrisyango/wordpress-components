@@ -1,0 +1,28 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-fwd-link-wrapper.cta {
+    &.hidden {
+        clip-path: unset;
+
+        & > * {
+            left: 0;
+            opacity: 1;
+        }
+    }
+
+    .block-editor-inner-blocks {
+        width: 100%;
+
+        & > .block-editor-block-list__layout {
+            &.is-layout-constrained {
+                margin-left: auto;
+                margin-right: auto;
+                width: var(--wp--style--global--content-size);
+            }
+        }
+    }
+}

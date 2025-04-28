@@ -1,0 +1,77 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fwd/featured-post",
+	"version": "0.1.0",
+	"title": "Featured Post",
+	"category": "fwd",
+	"icon": "cover-image",
+	"description": "Featured posts serve as a means for website administrators to curate and showcase content that they believe will be of particular interest to visitors. This practice helps improve user engagement, highlights key information, and contributes to an enhanced user experience on the website.",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "wide"
+		},
+		"query": {
+			"type": "object",
+			"default": {
+				"perPage": 1,
+				"pages": 0,
+				"offset": 0,
+				"postType": "post",
+				"order": "desc",
+				"orderBy": "date",
+				"author": "",
+				"search": "",
+				"exclude": [],
+				"sticky": "",
+				"inherit": false,
+				"taxQuery": null,
+				"parents": []
+			}
+		},
+		"namespace": {
+			"type": "string"
+		}
+	},
+	"example": {},
+	"providesContext": {
+		"queryId": "queryId",
+		"query": "query"
+	},
+	"supports": {
+		"align": true,
+		"anchor": true,
+		"ariaLabel": true,
+		"html": false,
+		"background": {
+			"backgroundImage": true,
+			"backgroundSize": true,
+			"__experimentalDefaultControls": {
+				"backgroundImage": true
+			}
+		},
+		"color": {
+			"gradients": true,
+			"heading": true,
+			"button": true,
+			"link": true,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
+		},
+		"spacing": {
+			"margin": [ "top", "bottom" ],
+			"padding": true
+		},
+		"layout": {
+			"allowSizingOnChildren": true
+		}
+	},
+	"textdomain": "fwd-plugin",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

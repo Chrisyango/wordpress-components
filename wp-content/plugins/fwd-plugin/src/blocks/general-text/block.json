@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fwd/general-text",
+	"title": "General Text",
+	"description": "A simple block with a heading, paragraph text, and optional button, with the option of being in rows or columns.",
+	"category": "fwd",
+	"icon": "text",
+	"keywords": [
+		"text",
+		"paragraph",
+		"heading"
+	],
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "center"
+		}
+	},
+	"supports": {
+		"align": ["wide", "full"],
+		"anchor": true,
+		"html": false
+	},
+	"textdomain": "fwd-plugin",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

@@ -1,0 +1,22 @@
+/* Editor styles */
+.statistic-block {
+	.block-editor-inner-blocks {
+		inline-size: 100%;
+
+		.block-editor-block-list__layout {
+			display: flex;
+			flex-direction: row;
+			gap: 2.5rem;
+			justify-content: center;
+		}
+	}
+}
+
+.statistic-block__image {
+	.components-resizable-box__container {
+		block-size: 100% !important;
+		inline-size: 100% !important;
+		max-block-size: 100% !important;
+		max-inline-size: 100% !important;
+	}
+}

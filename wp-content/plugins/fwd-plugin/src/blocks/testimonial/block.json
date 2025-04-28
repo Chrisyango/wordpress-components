@@ -1,0 +1,54 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fwd/testimonial",
+	"version": "1.0.0",
+	"title": "Testimonial",
+	"category": "fwd",
+	"icon": "editor-quote",
+	"description": "A testimonial block for displaying a client testimonial.",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "center"
+		},
+		"query": {
+			"type": "object",
+			"default": {
+				"perPage": 1,
+				"pages": 0,
+				"offset": 0,
+				"postType": "testimonial",
+				"order": "desc",
+				"orderBy": "date",
+				"exclude": [],
+				"inherit": false,
+				"taxQuery": null,
+				"parents": []
+			}
+		}
+	},
+	"example": {},
+	"providesContext": {
+		"queryId": "queryId",
+		"query": "query"
+	},
+	"supports": {
+		"align": [ "left", "center", "right" ],
+		"anchor": true,
+		"ariaLabel": true,
+		"html": false,
+		"spacing": {
+			"margin": [ "top", "bottom" ],
+			"padding": true
+		},
+		"layout": {
+			"allowSizingOnChildren": false
+		}
+	},
+	"textdomain": "testimonial",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
