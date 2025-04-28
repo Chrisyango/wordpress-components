@@ -1,0 +1,135 @@
+/*
+ * Gravity Forms
+ */
+.gform_wrapper.gravity-theme {
+	max-width: min( calc( 100% - clamp(70px, 35.941px + 7.921vw, 150px) ), 1160px );
+
+	form {
+		margin: 2rem 0 0;
+
+		@media ( min-width: 781px ) {
+			margin: 10rem 0 0;
+		}
+	
+		.gfield {
+	
+			input {
+				background: var(--wp--preset--color--base-2);
+				border: 0;
+				border-bottom: 1px solid var(--wp--preset--color--black);
+				color: var(--wp--preset--color--contrast-3);
+				font-size: var(--wp--preset--font-size--body-text);
+				font-weight: 700;
+				padding: 8px 16px;
+	
+				&::placeholder {
+					color: var(--wp--preset--color--contrast-3);
+				}
+			}
+	
+			&.gfield_html {
+				font-size: clamp(1.625rem, 1.04rem + 2.178vw, 3rem);
+				line-height: clamp(2.125rem, 1.433rem + 2.574vw, 3.75rem);
+				width: 100%;
+	
+				&.company-label {
+	
+	
+					@media ( min-width: 781px ) {
+						width: clamp(130px, 70.909px + 7.576vw, 180px);
+					}
+				}
+	
+				&.email-label {
+	
+	
+					@media ( min-width: 781px ) {
+						width: clamp(330px, 176.364px + 19.697vw, 460px);
+					}
+				}
+	
+				&.name-label {
+	
+	
+					@media ( min-width: 781px ) {
+						width: clamp(290px, 149.364px + 18.03vw, 409px);
+					}
+				}
+			}
+	
+			&.company-input {
+				width: 100%;
+	
+				@media ( min-width: 781px ) {
+					width: calc(100% - clamp(162px, 102.909px + 7.576vw, 212px));
+				}
+			}
+	
+			&.email-input {
+				width: 100%;
+	
+				@media ( min-width: 781px ) {
+					width: calc(100% - clamp(362px, 208.364px + 19.697vw, 492px));
+				}
+			}
+	
+			&.name-input {
+				width: 100%;
+	
+				@media ( min-width: 781px ) {
+					width: calc(100% - clamp(322px, 181.364px + 18.03vw, 441px));
+				}
+			}
+	
+			&.opportunity-input {
+				width: 100%;
+			}
+		}
+	
+		.gform_fields {
+			align-items: center;
+			display: flex;
+			flex-flow: row wrap;
+			gap: 16px;
+	
+			@media ( min-width: 781px ) {
+				gap: 32px;
+			}
+		}
+	
+		.gform_footer {
+			justify-content: center;
+			margin: 60px 0 0;
+			padding: 0;
+	
+			input {
+				margin: 0;
+	
+				&[type="submit"] {
+					background: transparent;
+					border: 4px solid var(--wp--preset--color--contrast-2);
+					border-radius: 80px;
+					color: var(--wp--preset--color--contrast-2);
+					cursor: pointer;
+					font-size: var(--wp--preset--font-size--button-text);
+					font-weight: 600;
+					line-height: clamp(2.25rem, 1.9369rem + 1.3917vw, 3.125rem);
+					min-width: 224px;
+					padding: 8px 28px;
+					transition:
+						background-color 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955),
+						border 300ms ease-in-out,
+						color 300ms ease-in-out,
+						transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+					transform: translate3d(0, 0, 0);
+	
+					&:hover {
+						background: var(--wp--preset--color--accent-4);
+						border-color: var(--wp--preset--color--accent-4);
+						color: var(--wp--preset--color--white);
+					}
+				}
+			}
+		}
+	}	
+}

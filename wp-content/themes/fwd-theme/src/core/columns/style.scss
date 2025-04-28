@@ -1,0 +1,23 @@
+/**
+ * Column Styles
+ */
+.wp-block-columns {
+	gap: clamp(30px, 22.623px + 1.967vw, 60px);
+	position: relative;
+	margin: 0;
+
+	@media ( min-width: 768px ) {
+
+		.wp-block-column {
+			margin: 0;
+
+			&.is-style-stagger-down {
+				margin: 180px 0 0;
+			}
+
+			&.is-style-stagger-up {
+				margin: -180px 0 0;
+			}
+		}
+	}
+}

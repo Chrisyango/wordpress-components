@@ -1,0 +1,139 @@
+@keyframes rotate {
+
+	from {
+		border-radius: 50%;
+		rotate: 0deg;
+	}
+
+	25% {
+		border-radius: 40% 60% 27% 73% / 55% 53% 47% 45%;
+		scale: 1.25;
+	}
+
+	50% {
+		border-radius: 40% 60% 27% 73% / 55% 53% 47% 45%;
+		scale: 1;
+	}
+
+	75% {
+		border-radius: 68% 32% 40% 60% / 62% 57% 43% 38%;
+		scale: 0.75 1.5;
+	}
+
+	to {
+		border-radius: 50%;
+		rotate: 360deg;
+	}
+}
+
+@keyframes rotate2 {
+
+	from {
+		border-radius: 50%;
+		rotate: 0deg;
+	}
+
+	25% {
+		border-radius: 20% 80% 42% 58% / 38% 62% 38% 62%;
+		scale: 0.5 0.75;
+	}
+
+	50% {
+		border-radius: 49% 51% 37% 63% / 30% 0% 100% 70%;
+		scale: 1;
+	}
+
+	75% {
+		border-radius: 71% 29% 8% 92% / 77% 51% 49% 23%;
+		scale: 1.75 1.25;
+	}
+
+	to {
+		border-radius: 50%;
+		rotate: 360deg;
+	}
+}
+
+@keyframes rotate3 {
+
+	from {
+		border-radius: 50%;
+		rotate: 0deg;
+	}
+
+	25% {
+		border-radius: 41% 59% 82% 18% / 70% 41% 59% 30%;
+		scale: 1.5 0.5;
+	}
+
+	50% {
+		border-radius: 73% 27% 21% 79% / 51% 86% 14% 49%;
+		scale: 1;
+	}
+
+	75% {
+		border-radius: 26% 74% 85% 15% / 15% 57% 43% 85% ;
+		scale: 1.5 0.75;
+	}
+
+	to {
+		border-radius: 50%;
+		rotate: 360deg;
+	}
+}
+
+.background-circle {
+	height: 100vh;
+	overflow: hidden;
+	width: 100vw;
+	position: relative;
+	z-index: -1;
+}
+
+.background-circle__blob {
+	animation: rotate 8s infinite;
+	aspect-ratio: 1;
+	background: linear-gradient(var(--wp--preset--color--contrast-2), var(--wp--preset--color--accent-2));
+	border-radius: 50%;
+	height: 500px;
+	left: 75%;
+	opacity: 0.5;
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	translate: -50% -50%;
+
+	&::after {
+		background: var(--wp--preset--color--base);
+		inset: 0;
+		content: "";
+		height: 100%;
+		mix-blend-mode: overlay;
+		position: absolute;
+		width: 100%;
+	}
+
+	&:nth-child(2) {
+		animation: rotate2 12s infinite;
+		background: linear-gradient(var(--wp--preset--color--base-3), var(--wp--preset--color--accent-3));
+	}
+
+	&:nth-child(3) {
+		animation: rotate3 16s infinite;
+		background: linear-gradient(var(--wp--preset--color--contrast), var(--wp--preset--color--accent));
+	}
+}
+
+.background-circle__blur {
+	backdrop-filter: blur(75px);
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+}
+
+.wp-block-template-part__background-circle {
+	inset: 0;
+	position: fixed;
+	z-index: -1;
+}

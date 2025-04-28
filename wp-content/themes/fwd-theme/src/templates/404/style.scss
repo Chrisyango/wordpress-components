@@ -1,0 +1,85 @@
+///
+/// Styles for the 404 error page
+///
+
+@layer template {
+
+	.error404 {
+
+		main {
+			margin: 0 auto;
+			max-width: var(--wp--style--global--content-size);
+
+			> p {
+				margin: 30px auto;
+				max-width: 600px;
+
+				@media( min-width: 992px ) {
+					margin: 40px auto;
+					max-inline-size: 768px;
+				}
+			}
+
+			.wp-block-buttons {
+				gap: 48px;
+				justify-content: center;
+				margin: 64px 0;
+			}
+
+			.wp-block-heading {
+				margin: clamp(72px, 57.967px + 3.598vw, 120px) auto 64px;
+				text-align: center;
+			}
+
+			.wp-block-page-list {
+				column-count: 4;
+				list-style-type: none;
+				margin: 64px 0;
+				padding: 0;
+
+				a {
+					color: var(--wp--preset--color--black);
+
+					&:hover {
+						color: var(--wp--preset--color--contrast);
+					}
+				}
+			}
+
+			/* Search form */
+			.wp-block-search {
+				margin: 64px auto;
+
+				.wp-element-button {
+					margin: 0;
+					inline-size: 218px;
+
+					@media screen and (max-width: 600px) {
+						inline-size: 100%;
+					}
+				}
+			}
+
+			.wp-block-search__inside-wrapper {
+				flex-flow: row wrap;
+				gap: 32px;
+				justify-content: space-between;
+				margin: auto;
+				inline-size: 75%;
+
+				@media screen and (max-width: 991px) {
+					inline-size: 100%;
+				}
+			}
+
+			.wp-block-search__input {
+				border: 6px solid var(--wp--preset--color--accent-3);
+				inline-size: calc(100% - 250px);
+
+				@media screen and (max-width: 600px) {
+					inline-size: 100%;
+				}
+			}
+		}
+	}
+}

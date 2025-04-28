@@ -1,0 +1,174 @@
+///
+/// Universal Styles
+///
+
+/* Styles to override core styles */
+
+/* Styles to override plugins */
+
+///
+/// Styles from the theme
+///
+
+/* Custom properties for use in synced animations */
+:root {
+	--animation-delay: 0s;
+	--animation-length: 12s;
+	--color--logo: url(/wp-content/themes/fwd-theme/assets/png/fwd-logo-1.png);
+	--color--blob-1: #000;
+	--color--blob-2: #000;
+	--color--blob-3: #000;
+	--color--block-cycle-1: #000;
+	--color--block-cycle-2: #000;
+	--color--block-cycle-3: #000;
+	--transition-delay: 300ms;
+	--transition-delay-long: 2000ms;
+
+	animation:
+		var(--animation-length) linear var(--animation-delay) infinite normal both running color-logo,
+		var(--animation-length) linear var(--animation-delay) infinite normal both running color-blob-1,
+		var(--animation-length) linear var(--animation-delay) infinite normal both running color-blob-2,
+		var(--animation-length) linear var(--animation-delay) infinite normal both running color-blob-3,
+		var(--animation-length) linear var(--animation-delay) infinite normal both running color-block-cycle-1,
+		var(--animation-length) linear var(--animation-delay) infinite normal both running color-block-cycle-2,
+		var(--animation-length) linear var(--animation-delay) infinite normal both running color-block-cycle-3;
+}
+
+/* Color cycle keyframes */
+@keyframes color-logo {
+
+	0% {--color--logo: url(/wp-content/themes/fwd-theme/assets/png/fwd-logo-1.png);}
+
+	33% {--color--logo: url(/wp-content/themes/fwd-theme/assets/png/fwd-logo-2.png);}
+
+	67% {--color--logo: url(/wp-content/themes/fwd-theme/assets/png/fwd-logo-3.png);}
+
+	100% {--color--logo: url(/wp-content/themes/fwd-theme/assets/png/fwd-logo-1.png);}
+}
+
+@keyframes color-blob-1 {
+
+	0% {--color--blob-1: var(--wp--preset--color--accent);}
+
+	33% {--color--blob-1: var(--wp--preset--color--accent-2);}
+
+	67% {--color--blob-1: var(--wp--preset--color--accent-3);}
+
+	100% {--color--blob-1: var(--wp--preset--color--accent);}
+}
+
+@keyframes color-blob-2 {
+
+	0% {--color--blob-2: var(--wp--preset--color--base);}
+
+	33% {--color--blob-2: var(--wp--preset--color--base-2);}
+
+	67% {--color--blob-2: var(--wp--preset--color--base-3);}
+
+	100% {--color--blob-2: var(--wp--preset--color--base);}
+}
+
+@keyframes color-blob-3 {
+
+	0% {--color--blob-3: var(--wp--preset--color--contrast);}
+
+	33% {--color--blob-3: var(--wp--preset--color--contrast-2);}
+
+	67% {--color--blob-3: var(--wp--preset--color--contrast-3);}
+
+	100% {--color--blob-3: var(--wp--preset--color--contrast);}
+}
+
+@keyframes color-block-cycle-1 {
+
+	0% {--color--block-cycle-1: var(--wp--preset--color--base-2);}
+
+	33% {--color--block-cycle-1: var(--wp--preset--color--base-3);}
+
+	67% {--color--block-cycle-1: var(--wp--preset--color--base);}
+
+	100% {--color--block-cycle-1: var(--wp--preset--color--base-2);}
+}
+
+@keyframes color-block-cycle-2 {
+
+	0% {--color--block-cycle-2: var(--wp--preset--color--base-3);}
+
+	33% {--color--block-cycle-2: var(--wp--preset--color--base-4);}
+
+	67% {--color--block-cycle-2: var(--wp--preset--color--base-4);}
+
+	100% {--color--block-cycle-2: var(--wp--preset--color--base-3);}
+}
+
+@keyframes color-block-cycle-3 {
+
+	0% {--color--block-cycle-3: var(--wp--preset--color--base-2);}
+
+	33% {--color--block-cycle-3: var(--wp--preset--color--base-2);}
+
+	67% {--color--block-cycle-3: var(--wp--preset--color--base-2);}
+
+	100% {--color--block-cycle-3: var(--wp--preset--color--base-2);}
+}
+
+///
+/// Element-specific styles
+///
+
+a:not(.wp-element-button):not(:has(img)):not([class]) {
+	color: var(--wp--preset--color--accent-5);
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	transition: color var(--transition-delay) ease-in-out;
+
+	// Target MacOS to remove the default underline on links
+	@supports (-apple-color-filter: none) {
+		text-decoration: none;
+	}
+
+	&::before {
+		background-color: var(--wp--preset--color--accent-5);
+		content: "";
+		block-size: calc( 100% + .35rem );
+		inline-size: 0%;
+		inset-block-start: -.175rem;
+		inset-inline-start: -.175rem;
+		position: absolute;
+		transition: width var(--transition-delay)  ease-in-out;
+		z-index: -1;
+	}
+
+	&:hover {
+		color: var(--color--block-cycle-1);
+
+		@media( prefers-reduced-motion ) {
+			color: var(--wp--preset--color--base);
+		}
+
+		&::before {
+			inline-size: calc( 100% + .35rem );
+		}
+	}
+
+	/* On touchscreens, enforce an underline */
+	@media (hover: none) {
+		text-decoration: underline;
+	}
+}
+
+body {
+	background-color: var(--color--block-cycle-1);
+	transition: background-color var(--transition-delay-long) ease-in-out;
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding: 12rem;
+}
+
+main {
+	margin: 0;
+	overflow: hidden;
+}

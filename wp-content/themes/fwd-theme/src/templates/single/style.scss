@@ -1,0 +1,30 @@
+/**
+ * Post single template styles
+ *
+ * All templates will load the universal stylesheet, so this is just for
+ * page-specific styles
+ */
+
+/* Main block container */
+.wp-site-blocks {
+
+	main {
+		margin: auto;
+		max-width: var(--wp--style--global--content-size);
+	}
+
+	/* Post breadcrumbs */
+	> .yoast-breadcrumbs {
+		margin: 5.5rem auto 0;
+		max-width: var(--wp--style--global--content-size);
+
+		a {
+			color: var(--wp--preset--color--black);
+		}
+
+		@media ( min-width: 960px ) {
+			margin-top: 8.75rem;
+		}
+	}
+}
+

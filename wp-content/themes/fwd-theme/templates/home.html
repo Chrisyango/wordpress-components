@@ -1,0 +1,32 @@
+<!-- wp:template-part {"slug":"header","area":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main"} -->
+<main class="wp-block-group">
+
+	<!-- wp:query {"queryId":0,"query":{"perPage":"3","pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"tagName":"section","namespace":"blog-roll","align":"wide","className":"blog-roll"} -->
+	<section class="wp-block-query alignwide blog-roll">
+		<!-- wp:post-template {"lock":{"move":true,"remove":true},"className":"blog-roll__wrapper"} -->
+			<!-- wp:post-featured-image {"isLink":true,"lock":{"move":true,"remove":true},"className":"blog-roll__image"} /-->
+			<!-- wp:group {"lock":{"move":true,"remove":true},"className":"blog-roll__content"} -->
+			<div class="wp-block-group blog-roll__content">
+				<!-- wp:post-title {"level":4,"isLink":true,"lock":{"move":true,"remove":true},"className":"blog-roll__title"} /-->
+				<!-- wp:post-date {"lock":{"move":true,"remove":true},"className":"blog-roll__date"} /-->
+				<!-- wp:post-terms {"term":"category","lock":{"move":true,"remove":true},"className":"blog-roll__categories"} /-->
+			</div>
+			<!-- /wp:group -->
+		<!-- /wp:post-template -->
+
+		<!-- wp:query-pagination {"align":"center","layout":{"type":"flex"}} -->
+			<!-- wp:query-pagination-previous {"label":"‹"} /-->
+			<!-- wp:query-pagination-numbers /-->
+			<!-- wp:query-pagination-next {"label":"›"} /-->
+		<!-- /wp:query-pagination -->
+	</section>
+	<!-- /wp:query -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"scroll-to-top","theme":"care","area":"footer"} /-->
+
+<!-- wp:template-part {"slug":"footer","area":"footer","tagName":"footer"} /-->

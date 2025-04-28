@@ -1,0 +1,38 @@
+///
+/// Paragraph block styles
+///
+
+p {
+
+	a {
+		color: var(--wp--preset--color--contrast-2);
+		position: relative;
+		text-decoration: underline;
+		transition: color 300ms ease-in-out;
+
+		/* Custom background for links on hover */
+		&::before {
+			background-color: var(--wp--preset--color--contrast-2);
+			content: "";
+			block-size: 135%;
+			inset-inline-start: -0.175rem;
+			position: absolute;
+			transition: width 300ms ease-in-out;
+			width: 0;
+			z-index: -1;
+		}
+
+		&:hover {
+			color: var(--wp--preset--color--base);
+
+			&::before {
+				width: calc(100% + 0.35rem);
+			}
+		}
+
+		/* Remove underline when a mouse is present */
+		@media ( pointer: fine ) {
+			text-decoration: none;
+		}
+	}
+}

@@ -1,0 +1,46 @@
+///
+/// Universal Styles
+///
+
+/* Styles to override core styles */
+@use "core/buttons/style.scss" as core-buttons;
+@use "core/columns/style.scss" as core-columns;
+@use "core/cover/style.scss" as core-cover;
+@use "core/details/style.scss" as core-details;
+@use "core/gform/style.scss" as core-gform;
+@use "core/image/style.scss" as core-image;
+@use "core/reset/style.scss" as core-reset;
+
+/* Styles to override plugins */
+
+///
+/// Styles from the theme
+///
+@use "parts/background-circle/style.scss" as template-background-circle;
+@use "parts/header/style.scss" as template-header;
+@use "parts/footer/style.scss" as template-footer;
+
+
+///
+/// Element-specific styles
+///
+
+a {
+	transition: 300ms ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	text-wrap: auto;
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding: 12rem;
+}
+
+main {
+	margin: 0;
+}

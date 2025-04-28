@@ -1,0 +1,2 @@
+!function(){"use strict";document.addEventListener("DOMContentLoaded",(function(){let e=(new Date).getSeconds();document.documentElement.style.setProperty("--animation-delay",`-${e}s`)}))}();
+//# sourceMappingURL=child-theme-universal.js.map

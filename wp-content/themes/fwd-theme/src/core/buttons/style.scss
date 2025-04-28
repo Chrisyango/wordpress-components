@@ -1,0 +1,45 @@
+/*
+ * Core buttons block
+ */
+.wp-block-buttons {
+	flex-direction: column;
+	gap: 0 48px;
+
+	@media ( min-width: 768px ) {
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+
+	.wp-block-button {
+		width: 100%;
+
+		@media ( min-width: 768px ) {
+			width: auto;
+
+			&:first-of-type {
+				margin-left: 0;
+			}
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+
+		&.is-style-outline > .wp-block-button__link:hover {
+			background-color: var(--wp--preset--color--accent-4, var(--wp--preset--color--accent-4, transparent)) !important;
+			color: var(--color--block-cycle-1) !important;
+			border-color: var(--wp--preset--color--accent-4, var(--wp--preset--color--accent-4, currentColor)) !important;
+		}
+	}
+
+	.wp-block-button__link {
+		border-style: solid;
+		transition:
+			background-color var(--transition-delay)  cubic-bezier(0.455, 0.03, 0.515, 0.955),
+			border var(--transition-delay)  ease-in-out,
+			color var(--transition-delay)  ease-in-out,
+			transform var(--transition-delay)  cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		transform: translate3d(0, 0, 0);
+		width: 100%;
+	}
+}

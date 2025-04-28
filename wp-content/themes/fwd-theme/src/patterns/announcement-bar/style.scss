@@ -1,0 +1,43 @@
+/**
+ * Announcement Bar
+ */
+
+/* If the wp-admin bar is visible, adjust the top margin */
+body.admin-bar .announcement-bar {
+	margin-top: 2.875rem;
+
+	@media ( min-width: 783px ) {
+		margin-top: 2rem;
+	}
+}
+
+.announcement-bar {
+	background-color: var(--wp--preset--color--accent-2);
+	position: relative;
+	transition: background-color var(--transition-delay) ease-in-out;
+
+	&.is-hidden {
+		display: none;
+	}
+}
+
+.announcement-bar__close {
+	appearance: none;
+	cursor: pointer;
+	position: absolute;
+	left: calc(100% - 2rem);
+	top: calc(50% - 0.5rem);
+}
+
+.announcement-bar__message {
+	font-size: 1rem;
+	font-weight: 700;
+	margin: 0 auto;
+	max-width: var(--wp--style--global--content-size);
+	padding: 1rem 0;
+	text-align: center;
+
+	@media ( min-width: 992px ) {
+		font-size: 1.125rem;
+	}
+}

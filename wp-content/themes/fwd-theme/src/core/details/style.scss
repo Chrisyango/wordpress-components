@@ -1,0 +1,118 @@
+/**
+ * Details block styles
+ */
+
+.wp-block-details {
+
+	--transition: 300ms ease-in-out;
+
+	margin: 1rem auto;
+	max-block-size: 800px;
+	max-inline-size: var(--wp--style--global--wide-size);
+	overflow: hidden;
+	position: relative;
+	transition: max-height var(--transition);
+
+	@media ( min-width: 768px ) {
+		margin: 1.25rem auto;
+	}
+
+	/* Custom marker */
+	&::after,
+	&::before {
+		content: "";
+		pointer-events: none;
+		position: absolute;
+	}
+
+	&::after {
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNi4wIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTIwMS40IDEzNy40YzEyLjUtMTIuNSAzMi44LTEyLjUgNDUuMyAwbDE2MCAxNjBjMTIuNSAxMi41IDEyLjUgMzIuOCAwIDQ1LjNzLTMyLjggMTIuNS00NS4zIDBMMjI0IDIwNS4zIDg2LjYgMzQyLjZjLTEyLjUgMTIuNS0zMi44IDEyLjUtNDUuMyAwcy0xMi41LTMyLjggMC00NS4zbDE2MC0xNjB6Ii8+PC9zdmc+);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		block-size: 1.25rem;
+		filter: invert(0);
+		inline-size: 1.25rem;
+		inset-inline-end: 1.75rem;
+		inset-block-start: 1.75rem;
+		transition:
+			filter var(--transition),
+			transform var(--transition);
+		transform: rotate(180deg);
+		z-index: 1;
+
+		@media ( min-width: 768px ) {
+			inset-block-start: 2.25rem;
+		}
+	}
+
+	&::before {
+		background-color: var(--wp--preset--color--base);
+		block-size: 2.5rem;
+		border-radius: 50%;
+		inline-size: 2.5rem;
+		inset-inline-end: 1.125rem;
+		inset-block-start: 1.125rem;
+		transition: background-color var(--transition);
+		z-index: 0;
+
+		@media ( min-width: 768px ) {
+			inset-block-start: 1.675rem;
+		}
+	}
+
+	summary {
+		background-color: var(--wp--preset--color--accent-2);
+		display: block;
+		font-size: var(--wp--preset--font-size--h-5);
+		padding: 1.5rem 1rem;
+
+		@media ( min-width: 768px ) {
+			padding: 1.875rem 6rem;
+		}
+
+		&:hover
+		&::marker {
+			content: ""; // We'll add our own marker
+		}
+	}
+
+	&:hover {
+
+		&::after {
+			filter: invert(1);
+		}
+
+		&::before {
+			background-color: var(--wp--preset--color--accent);
+		}
+	}
+
+	/* For everthing other than the summary */
+	> :not(summary) {
+		box-sizing: border-box;
+		max-height: 0;
+		max-width: var(--wp--style--global--wide-size);
+		overflow: hidden;
+		padding: 0 1rem;
+		transition: max-height var(--transition);
+
+		@media ( min-width: 768px ) {
+			padding: 0 6rem;
+		}
+	}
+
+	/* Styles for when the details block is open */
+	&[open] {
+
+		:not(summary) {
+			max-height: 800px; // Update this to match max-height of the content
+			transition: max-height var(--transition); // For closing
+		}
+
+		&::after {
+			transform: rotate(0deg);
+		}
+	}
+
+}

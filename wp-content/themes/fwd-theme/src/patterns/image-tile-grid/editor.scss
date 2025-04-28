@@ -1,0 +1,18 @@
+/**
+ * Image Tile Grid Editor Styles
+ */
+.wp-block-group.image-tile-grid {
+	gap: clamp(30px, 22.623px + 1.967vw, 60px);
+
+	.wp-block-image {
+
+		div {
+			height: 100%;
+
+			img {
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}

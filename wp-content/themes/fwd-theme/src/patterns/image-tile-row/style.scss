@@ -1,0 +1,60 @@
+/**
+ * Image Tile Row Styles
+ */
+.wp-block-columns.image-tile-row {
+	clip-path: inset(0 -100vmax);
+	gap: clamp(30px, 21.224px + 2.041vw, 60px);
+	margin: clamp(30px, 8.713px + 4.95vw, 80px) 0;
+	max-width: min( calc( 100% - clamp(30px, 21.485px + 1.98vw, 50px) ), 1764px );
+	padding: 30px 0;
+	top: 0;
+
+	@media ( min-width: 1441px ) {
+		margin: clamp(80px, 17.391px + 4.348vw, 100px) 0;
+		max-width: min( calc( 100% - clamp(50px, -219.217px + 18.696vw, 136px) ), 1764px );
+	}
+
+	&:has(.is-style-stagger-up) {
+
+		@media ( min-width: 781px ) {
+			padding: 300px 0 120px;
+		}
+
+		@media ( min-width: 1441px ) {
+			padding: 300px 0 120px;
+		}
+	}
+
+	@media ( min-width: 781px ) {
+		padding: 120px 30px;
+	}
+
+	@media ( min-width: 1441px ) {
+		padding: 120px 60px;
+	}
+
+	.wp-block-column {
+
+		@media ( max-width: 782px ) {
+			flex-basis: calc(50% - 24px) !important;
+		}
+	}
+
+	.wp-block-image {
+
+		&.has-background {
+			padding: 0;
+		}
+
+		img {
+			aspect-ratio: 1 / 1;
+			object-fit: cover;
+		}
+
+		figcaption {
+			font-size: clamp(1rem, 0.84rem + 0.594vw, 1.375rem);
+			line-height: clamp(1.375rem, 1.109rem + 0.99vw, 2rem);
+			margin: clamp(30px, 25.743px + 0.99vw, 40px) clamp(7px, 2.317px + 1.089vw, 18px) 0;
+		}
+	}
+}

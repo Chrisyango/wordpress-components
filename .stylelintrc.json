@@ -1,0 +1,73 @@
+{
+	"customSyntax": "postcss-scss",
+	"extends": [
+		"@wordpress/stylelint-config/scss",
+		"stylelint-config-recommended"
+	],
+	"fix": true,
+	"ignoreFiles": [
+		"style.css",
+		"assets/css/*.css"
+	],
+	"plugins": [
+		"stylelint-scss"
+	],
+	"rules": {
+		"at-rule-no-unknown" : null,
+		"annotation-no-unknown" : true,
+		"block-no-empty" : null,
+		"color-no-invalid-hex" : true,
+		"comment-no-empty" : null,
+		"custom-property-no-missing-var-function" : true,
+		"declaration-block-no-duplicate-custom-properties" : true,
+		"declaration-block-no-duplicate-properties" : true,
+		"declaration-block-no-redundant-longhand-properties" : true,
+		"declaration-block-no-shorthand-property-overrides" : true,
+		"font-family-no-duplicate-names" : true,
+		"font-family-no-missing-generic-family-keyword" : true,
+		"function-calc-no-unspaced-operator" : true,
+		"function-linear-gradient-no-nonstandard-direction" : true,
+		"function-no-unknown" : true,
+		"keyframe-block-no-duplicate-selectors" : true,
+		"keyframe-declaration-no-important" : null,
+		"length-zero-no-unit" : true,
+		"media-feature-name-no-unknown" : true,
+		"named-grid-areas-no-invalid" : true,
+		"no-descending-specificity" : null,
+		"no-duplicate-at-import-rules" : true,
+		"no-duplicate-selectors" : true,
+		"no-empty-source" : null,
+		"no-invalid-double-slash-comments" : true,
+		"no-invalid-position-at-import-rule" : true,
+		"no-irregular-whitespace" : true,
+		"no-unknown-animations" : true,
+		"property-no-unknown" : true,
+		"scss/at-extend-no-missing-placeholder" : true,
+		"scss/at-function-parentheses-space-before" : "never",
+		"scss/at-rule-no-unknown" : [true],
+		"scss/comment-no-empty": null,
+		"scss/dollar-variable-colon-newline-after" : [
+			"always-multi-line",
+			{
+				"disableFix" : false
+			}
+		],
+		"scss/dollar-variable-colon-space-after" : "always-single-line",
+		"scss/dollar-variable-no-missing-interpolation" : true,
+		"scss/declaration-nested-properties-no-divided-groups" : true,
+		"scss/no-duplicate-mixins" : true,
+		"scss/no-global-function-names" : true,
+		"scss/selector-no-redundant-nesting-selector" : [
+			true,
+			{
+				"ignoreKeywords" : [ "when" ]
+			}
+		],
+		"selector-class-pattern": null,
+		"selector-pseudo-class-no-unknown" : true,
+		"selector-type-no-unknown" : true,
+		"shorthand-property-no-redundant-values" : true,
+		"string-no-newline" : true,
+		"unit-no-unknown" : true
+	}
+}

@@ -1,0 +1,18 @@
+/**
+ * Search template styles
+ *
+ * All templates will load the universal stylesheet, so this is just for
+ * page-specific styles
+ */
+
+.search {
+
+	main.wp-block-group {
+		margin: 6rem auto 0;
+		max-width: var(--wp--style--global--content-size);
+	}
+
+	.wp-block-query-title {
+		text-transform: capitalize;
+	}
+}
