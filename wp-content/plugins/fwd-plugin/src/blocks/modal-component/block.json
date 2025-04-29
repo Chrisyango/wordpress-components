@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fwd/modal-component",
+	"title": "Modal Component",
+	"description": "A demonstration of the modal component.",
+	"category": "fwd",
+	"icon": "text",
+	"keywords": [
+		"text",
+		"paragraph",
+		"heading"
+	],
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "center"
+		}
+	},
+	"supports": {
+		"align": ["wide", "full"],
+		"anchor": true,
+		"html": false
+	},
+	"textdomain": "fwd-plugin",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
