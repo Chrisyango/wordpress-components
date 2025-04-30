@@ -20,13 +20,16 @@ export default function Edit() {
     const openModal = () => setOpen( true );
     const closeModal = () => setOpen( false );
 	const { insertBlocks } = useDispatch( modalComponentStore );
+
 	/**
 	 * Get 'core/group' patterns with the 'fwd-content' category
 	 * @returns array
 	*/
 	const patterns = useSelect( ( select ) => {
 		const allPatterns = select( modalComponentStore ).getPatternsByBlockTypes('core/group');
+
 		const fwdContentPatterns = allPatterns.filter(pattern => {
+			console.log(pattern.blocks);
 			if (!pattern.categories) {
 				return;
 			}
@@ -35,6 +38,9 @@ export default function Edit() {
 		return fwdContentPatterns;
 	} );
 
+	/**
+	 * Insert Pattern onto page
+	*/
 	function insertPattern(pattern) {
 		insertBlocks(pattern);
 	}
