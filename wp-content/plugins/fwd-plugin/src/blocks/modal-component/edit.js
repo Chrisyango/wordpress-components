@@ -29,7 +29,6 @@ export default function Edit() {
 		const allPatterns = select( modalComponentStore ).getPatternsByBlockTypes('core/group');
 
 		const fwdContentPatterns = allPatterns.filter(pattern => {
-			console.log(pattern.blocks);
 			if (!pattern.categories) {
 				return;
 			}

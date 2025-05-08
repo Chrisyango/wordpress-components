@@ -1,0 +1,50 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fwd/contrast-checker",
+	"title": "Contrast Checker",
+	"description": "A demonstration of the contrast checker component.",
+	"category": "fwd",
+	"icon": "text",
+	"keywords": [
+		"text",
+		"paragraph",
+		"heading"
+	],
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "center"
+		},
+		"content": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"align": ["wide", "full"],
+		"anchor": true,
+		"html": false,
+		"background": {
+			"backgroundImage": true,
+			"backgroundSize": true,
+			"__experimentalDefaultControls": {
+				"backgroundImage": true
+			}
+		},
+		"color": {
+			"gradients": true,
+			"heading": true,
+			"button": true,
+			"link": true,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
+		}
+	},
+	"textdomain": "fwd-plugin",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
