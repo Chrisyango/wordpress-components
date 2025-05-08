@@ -6,22 +6,20 @@
 	"description": "A demonstration of the contrast checker component.",
 	"category": "fwd",
 	"icon": "text",
-	"keywords": [
-		"text",
-		"paragraph",
-		"heading"
-	],
+	"keywords": [ "text", "paragraph", "heading" ],
 	"attributes": {
 		"align": {
 			"type": "string",
 			"default": "center"
 		},
 		"content": {
-			"type": "string"
+			"type": "string",
+			"source": "html",
+			"selector": "h2"
 		}
 	},
 	"supports": {
-		"align": ["wide", "full"],
+		"align": [ "wide", "full" ],
 		"anchor": true,
 		"html": false,
 		"background": {

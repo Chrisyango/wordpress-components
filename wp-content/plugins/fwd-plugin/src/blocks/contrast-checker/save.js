@@ -2,22 +2,26 @@
  * Package imports
  */
 import { __ } from '@wordpress/i18n';
-import { useBlockProps } from '@wordpress/block-editor';
+import { RichText, useBlockProps } from '@wordpress/block-editor';
 
 /**
  * Editor styles
  */
 import './editor.scss';
 
-export default function Save() {
-	const blockProps = useBlockProps.save({
+export default function Save( { attributes } ) {
+	const blockProps = useBlockProps.save( {
 		className: 'contrast-checker-component',
-	});
+	} );
 
 	return (
-		<section {...blockProps}>
+		<section { ...blockProps }>
 			<div class="contrast-checker-component__wrapper">
-				Contrast Checker Component
+				<RichText.Content
+					{ ...blockProps }
+					tagName="h2"
+					value={ attributes.content }
+				/>
 			</div>
 		</section>
 	);
